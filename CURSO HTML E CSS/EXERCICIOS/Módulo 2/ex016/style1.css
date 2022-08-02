@@ -1,0 +1,48 @@
+@charset "UTF-8";
+body{
+    background-color: bisque;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+
+    /*
+    Medidas Absolutas
+    cm, mm in, px, pt, pc
+    
+    Medidas Relativas
+    em, ex, rem, vw, vh, %
+
+    Recomendação w3c usar px e em
+    16px geralmente = 1em
+    */
+
+    font-size:1em ;
+    font-weight: bold;
+    /*lighter normal bold bolder ou de 100 à 900*/
+    font-style: italic;
+}
+main{
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px gray;
+}
+h1{
+    font: italic bolder 2em 'work sans', sans-serif;
+    /* 
+    shorthand font:
+    - font-style:
+    - font-weight:
+    - font-size:
+    - font-family 
+    */
+}
+h2{
+    font: normal bold 1.5em 'work sans', sans-serif;
+    /* 
+    shorthand font:
+    - font-style:
+    - font-weight:
+    - font-size:
+    - font-family 
+    */
+}
