@@ -62,21 +62,31 @@ section.imagem{
     color: white;
     text-align: center;
     padding: 10px;
-}
-
-#img1{
-    background-image: url(imagens/background001.jpg);
-}
-
-#img2{
-    background-image: url(imagens/background002.jpg);
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 section.imagem > p{
     display: inline-block;
+    border-radius: 10px;
     padding: 15px;
     background-color: rgba(0, 0, 0, 0.466);
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
 }
+
+section#img1{
+    background-image: url(imagens/background001.jpg);
+    background-position: right center;
+    background-size: cover;
+
+}
+
+section#img2{
+    background-image: url(imagens/background002.jpg);
+    background-position: right center;
+    background-size: cover;
+}
+
 a{
     color: white;
     text-decoration: none;
