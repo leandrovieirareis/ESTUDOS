@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+
+    <link rel="stylesheet" href="stylesheet/style.css" media="screen">
+
+    <link rel="stylesheet" href="stylesheet/press.css" media="print">
+</head>
+<body>
+    <main>
+        <h1>Formulário de Solicitação de Orçamento</h1>
+        <form action="cadastro.php" method="get" autocomplete="on">
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+                <p>
+                    <label for="inome">Nome</label>
+                    <input type="name" name="nome" id="inome" minlength="4" maxlength="20" required>
+                </p>
+                <p>
+                    <label for="ano">Em que ano você nasceu?</label>
+                    <input type="number" name="ano" id="ano" min="1900" max="2020" oninput="calcIdade()">
+                    <label for="idade">   Idade esse ano:</label>
+                    <output id="idade">0</output>
+                </p>
+                <p>
+                    <label for="iemail">E-mail</label>
+                    <input type="email" name="email" id="email" required>
+                </p>
+                <p>
+                    <Label for="itel">Telefone</Label>
+                    <input type="tel" name="tel" id="itel" autocomplete="tel" required placeholder="(xx)xxxx-xxxx">
+                </p>
+            </fieldset>
+            <!--Estudar mais sobre RegEx-->
+            <br>
+            <fieldset>
+                <legend>Sexo</legend>
+                <input type="radio" name="sexo" id="sxmas"><label for="sxmas">Masculino</label>
+                <input type="radio" name="sexo" id="sxfem"><label for="sxfem">Feminino</label>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Informações Adicionais</legend>
+                <p>
+                    <label for="pes">Empresa ou pessoa física?</label>
+                    <select name="pes" id="pes">
+                        <option value="" selected>---Escolha---</option>
+                        <option value="PF">Pessoa Física</option>
+                        <option value="PJ">Pessoa Jurídica(Empresa)</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="prof">Qual sua Profissão?</label>
+                    <input type="text" name="prof" id="prof" list="lsprof">
+                    
+                    <datalist id="lsprof">
+                            <option>Administrador</option>
+                            <option>Gerente</option>
+                            <option>Autônomo</option>
+                            <option>Desenvolvedor de Conteúdo</option>
+                            <option>Outros</option>
+                    </datalist>
+                </p>
+
+            </fieldset>
+            <br>
+
+            <fieldset>
+                <legend>Áreas de Interesse</legend>
+                <input type="checkbox" name="consult" id="consult"><label for="consult">Consultoria</label> <br>
+                <input type="checkbox" name="design" id="design"><label for="design">Design Gráfico</label> <br>
+                <input type="checkbox" name="logo" id="logo"><label for="logo">Criação de Logomarca</label> <br>
+                <input type="checkbox" name="card" id="card"><label for="card">Cartão de Visita</label> <br>
+                <input type="checkbox" name="site" id="site"><label for="site">Criação de Website</label>
+        
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Qual as cores principais da sua empresa?</legend>
+                <p>
+                    <label for="cor1">Cor1:</label>
+                <input type="color" name="cor1" id="cor1" value="#0000ff">
+                </p>
+                <p>
+                    <label for="cor2">Cor2:</label>
+                <input type="color" name="cor2" id="cor2" value="#ff00ff">
+                </p>
+                <p>
+                    <label for="cor3">Cor3:</label>
+                <input type="color" name="cor3" id="cor3" value="#ffffff">
+                </p>
+            </fieldset>
+            <br>
+            <fieldset class="upload" id="upload">
+                <legend>Envie um arquivo do material atual o qual deseja refazer ou um exemplo que lhe agrada:</legend>
+                <label for="img">Upload de Imagem:</label>
+                <input type="file" name="img" id="img">
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Qual o nível de satisfação com este material?</legend>
+                <p>
+                    <label for="nivel">Nível de Satisfação</label>
+                    <input type="range" name="nivel" id="nivel" min="0" max="10" value="5" oninput="val.innerHTML = Number(nivel.value)">
+                    <output id="val">5</output>
+                    <br>
+                </p>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Observações:</legend>
+                <label for="msg">Observações asicionais:</label>
+                <br>
+                <textarea name="msg" id="msg" cols="60" rows="10"></textarea>
+                <br>
+                <p>Max. 3000 caracteres.</p>
+            </fieldset>
+
+            <br>
+            <section class="submit" id="submit">
+                <p>
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Limpar">
+                </p>
+            </section>
+        </form>
+        <script>
+            function calcIdade(){
+                let atual = new Date().getFullYear()
+                idade.innerHTML = Number(atual) - Number(ano.value)
+            }
+        </script>
+
+    </main>
+</body>
+</html>

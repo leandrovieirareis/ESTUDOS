@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+
+*{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+h1{
+    font-size: 27px;
+    color: white;
+    line-height: 2em;
+    background-color: gray;
+}
+fieldset{
+    border-radius: 5px;
+    background-color: lightgray;
+    border: none;
+}
+.upload{
+    display: none;
+}
+.submit{
+   display: none;
+}

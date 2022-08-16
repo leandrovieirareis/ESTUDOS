@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Exemplo de Formulário</h1>
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            <p>
+                <label for="inome">Nome</label>
+                <input type="name" name="nome" id="inome" minlength="4" maxlength="20" required>
+            </p>
+            <p>
+                <label for="iemail">E-mail</label>
+                <input type="email" name="email" id="email" required>
+            </p>
+            <p>
+                <Label for="itel">Telefone</Label>
+                <input type="tel" name="tel" id="itel" autocomplete="tel" required placeholder="(xx)xxxx-xxxx">
+            </p>            
+        </fieldset>
+        <!--Estudar mais sobre RegEx-->
+        <br>
+        <fieldset>
+            <legend>Sexo</legend>
+            <input type="radio" name="sexo" id="sxmas"><label for="sxmas">Masculino</label>
+            <input type="radio" name="sexo" id="sxfem"><label for="sxfem">Feminino</label>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Áreas de Interesse</legend>
+            <input type="checkbox" name="consult" id="consult"><label for="consult">Consultoria</label> <br>
+            <input type="checkbox" name="design" id="design"><label for="design">Design Gráfico</label> <br>
+            <input type="checkbox" name="logo" id="logo"><label for="logo">Criação de Logomarca</label> <br>
+            <input type="checkbox" name="card" id="card"><label for="card">Cartão de Visita</label> <br>
+            <input type="checkbox" name="site" id="site"><label for="site">Criação de Website</label>
+            
+        </fieldset>
+
+        <section class="submit" id="submit">
+            <p>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </p>
+        </section>
+
+    </form>
+    
+</body>
+</html>

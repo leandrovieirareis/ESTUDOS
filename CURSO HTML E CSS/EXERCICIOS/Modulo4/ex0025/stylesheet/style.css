@@ -1,0 +1,41 @@
+@charset "utf-8";
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .95em;
+}
+body{
+    background-color: black;
+}
+main{
+    background-color: darkgreen;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 500px;
+    margin: auto;
+
+}
+h1{
+    font-size: 27px;
+    color: white;
+    line-height: 2em;
+}
+fieldset{
+    border-radius: 5px;
+    background-color: lightgray;
+    border: none;
+}
+legend{
+    font-weight: bolder;
+    background-color: rgb(26, 177, 6);
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+.submit{
+    max-width: 300px;
+    background-color: rgb(26, 177, 6);
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+}
